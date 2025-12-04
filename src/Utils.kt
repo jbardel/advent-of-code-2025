@@ -13,6 +13,13 @@ fun readCommaSeparatedInput(name: String) = Path("src/$name.txt")
     .trim()
     .split(",")
 
+fun readInputToArray(name: String) = Path("src/$name.txt")
+    .readText()
+    .trim()
+    .lines()
+    .map { it.toCharArray() }
+
+
 /**
  * Converts string to md5 hash.
  */
